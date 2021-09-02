@@ -10,6 +10,14 @@
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
         <title>Calvin's Portfolio</title>
+        <script type="text/javascript">
+            function myFun() {
+                document.getElementById("nama").value = null;
+                document.getElementById("mail").value = null;
+                document.getElementById("messages").value = null;
+                alert("Thank you, the message has been delivered !")
+            }
+        </script>
     </head>
     <body>
         <!--===== HEADER =====-->
@@ -167,11 +175,11 @@
                 <h2 class="section-title">Contact</h2>
 
                 <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="Send" class="contact__button button">
+                      <form id="form" action="" class="contact__form">
+                        <input type="text" id="nama" placeholder="Name" class="contact__input">
+                        <input type="mail" id="mail" placeholder="Email" class="contact__input">
+                        <textarea name="" id="messages" cols="0" rows="10" class="contact__input"></textarea>
+                        <input type="button" value="Send" id="btn" class="contact__button button" onclick="myFun()" />
                     </form>
                 </div>
             </section>
